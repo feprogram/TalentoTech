@@ -1,0 +1,556 @@
+
+
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 15px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h4 {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+/* 1-CSS del header */
+
+/* .header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(0, 0, 0, .8);
+    padding: 10px;
+} */
+
+/* .navHeader {
+
+    display: flex;
+    align-items: center;
+} */
+
+header,
+footer {
+    /* .logo {
+
+        width: 100px;
+    }
+
+    ul {
+
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+        margin-right: 15px;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    } */
+
+    .fa-whatsapp {
+        color: #25d366;
+        font-size: 3em;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .ulHeader {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*2-CSS del main*/
+
+/*2-1 Sección principal del  main del index.html */
+
+.sectionPrincipalIndex {
+
+    background-image: url(../assets/img/Gemini_Generated_Image_ic5ntjic5ntjic5n.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+
+    .textoPrincipalDelMain {
+        text-align: center;
+        width: 50%;
+        color: gray;
+
+        p {
+            font-size: 1.5rem;
+            color: white;
+            margin: 40px 0;
+            backdrop-filter: blur(15px);
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            color: whitesmoke;
+            background-color: #333;
+            border: 2px solid #555;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 10px 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background-color: #555;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .sectionPrincipalIndex {
+
+        display: flex;
+        flex-direction: column;
+        height: initial;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .textoPrincipalDelMain {
+
+            text-align: center;
+
+            width: 100%;
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            a {
+
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+
+.productosDestacados,
+.nuestrasMarcas,
+.nuestrosClientes {
+
+    margin: 15px 0;
+
+    h2 {
+        margin: 15px 0;
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+        margin: 15px 0;
+        box-shadow: 10px 5px 10px black;
+    }
+
+    a {
+        color: black;
+    }
+
+    .cliente {
+
+        p {
+            max-width: 250px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .productosDestacados,
+    .nuestrasMarcas,
+    .nuestrosClientes {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+
+.listadoDeProductosDestacadosIndex,
+.listadoDeNuestrasMarcasIndex,
+.listadoDeNuestrosClientesIndex {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+    text-align: center;
+    height: auto;
+
+}
+
+.productosDestacados {
+
+    .producto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+
+            text-decoration: none;
+            color: #257a57;
+        }
+
+        a {
+            width: 80%;
+            text-decoration: none;
+            font-size: .8rem;
+            color: whitesmoke;
+            background-color: #333;
+            border: 2px solid #555;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 5px 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background-color: #555;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+.nuestrasMarcas {
+    background-image: url(../assets/img/istockphoto-1204442466-1024x1024.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.nosotros {
+
+    .h2Nosotros {
+        background-image: linear-gradient(to right top, #d5cabd, #c5b39d, #b49c7f, #a48561, #936f45, #936f45, #936f45, #936f45, #a48561, #b49c7f, #c5b39d, #d5cabd);
+        color: whitesmoke;
+    }
+
+}
+
+.nosotrosCuerpo {
+    display: grid;
+    grid-row: auto;
+    grid-template-areas:
+        "nosotrosTexto nosotrosTexto img1"
+        "img4 img3 img2";
+
+    /* background-image: url("../assets/img/istockphoto-149340775-1024x1024.jpg"); */
+    background-image: linear-gradient(to right top, #d5cabd, #c5b39d, #b49c7f, #a48561, #936f45, #936f45, #936f45, #936f45, #a48561, #b49c7f, #c5b39d, #d5cabd);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    gap: 20px;
+    padding: 15px;
+
+    .nosotrosTexto {
+
+        grid-area: nosotrosTexto;
+        padding: 15px;
+        color: white;
+        text-align: justify;
+    }
+
+    img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .img1 {
+
+        grid-area: img1;
+        height: 300px;
+        width: 100%;
+    }
+
+    .img2 {
+
+        grid-area: img2;
+        height: 300px;
+        width: 100%;
+    }
+
+    .img3 {
+
+        grid-area: img3;
+        height: 300px;
+        width: 100%;
+
+    }
+
+    .img4 {
+
+        grid-area: img4;
+        height: 300px;
+        width: 100%;
+
+    }
+
+    .img5 {
+
+        grid-area: img5;
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .nosotrosCuerpo {
+
+        .img1,
+        .img2,
+        .img3,
+        .img4 {
+
+            display: none;
+        }
+    }
+}
+
+
+footer {
+    background-color: rgb(0, 0, 0, .8);
+
+    .   tenedorPrincipalFooter {
+
+        display: flex;
+        top: 0;
+        padding: 10px;
+        color: white;
+
+        .contenedorDos {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            address {
+
+                text-align: center;
+
+                p {
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .contenedorTres {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    footer {
+
+        .contenedorPrincipalFooter {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            .contenedorUno {
+
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .logo {
+
+                    width: 15%;
+                    justify-content: center;
+                }
+            }
+
+            .contenedorDos {
+
+                nav {
+                    margin-top: 2px;
+                    margin-bottom: 2px;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 2px;
+
+                        li {
+                            text-align: center;
+                        }
+
+                    }
+                }
+
+                .contacto {
+                    margin-bottom: 2px;
+
+                    .formAction {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 2px;
+
+                    }
+                }
+
+                address {
+
+                    gap: 2px;
+                }
+            }
+
+            nav {
+
+                .contenedorTres {
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+            }
+
+        }
+    }
+
+
+}
+
+/* CSS contacto.html*/
+
+.mainContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 70vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Contenedor del formulario */
+
+.form {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Título */
+
+.h2Contacto {
+    text-align: center;
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Etiquetas de los campos */
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555555;
+}
+
+/* Campos de entrada */
+.input[type="text"],
+.input[type="email"],
+.textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 15px;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+.input[type="text"]:focus,
+.input[type="email"]:focus,
+.textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Botón de envío */
+.button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo para el área de texto */
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.mainCarrito {
+
+    height: 65vh;
+}
