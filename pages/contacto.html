@@ -48,70 +48,65 @@
   <div class="separador"></div>
 
   <section class="container">
-  <form class="row g-3">
+  <form class="row g-3" id="miFormulario">
     <div class="col-md-6">
     <label class="label" for="name">Nombre:</label>
-    <input class="input" type="text" id="name" name="name" required>
+    <input class="input" type="text" id="name" name="name" required placeholder="Ingrese su nombre">
     </div>
     <div class="col-md-6">
     <label class="label" for="apellido">Apellido:</label>
-    <input class="input" type="text" id="apellido" name="apellido" required>
+    <input class="input" type="text" id="apellido" name="apellido" id="apellido" required placeholder="Ingrese su apellido">
     </div>
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
+      <input type="email" class="form-control" id="inputEmail1" id="email" required placeholder="Ingrese su correo electrónico">
     </div>
     <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" class="form-control" id="inputPassword4">
+      <label for="inputEmail4" class="form-label">Re Ingresar Email</label>
+      <input type="email" class="form-control" id="inputEmail2" id="email" required placeholder="Re ingrese su correo electrónico">
+    </div>
+   
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Dirección</label>
+      <input type="text" class="form-control" id="inputAddress" id="direccion" required placeholder="Ingrese su dirección...">
     </div>
     <div class="col-12">
-      <label for="inputAddress" class="form-label">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress2" class="form-label">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      <label for="inputAddress2" class="form-label">Dirección 2</label>
+      <input type="text" class="form-control" id="inputAddress2" id="direccion" placeholder="Dpto., estudio, o piso...">
     </div>
     <div class="col-md-6">
-      <label for="inputCity" class="form-label">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <label for="inputCity" class="form-label">Ciudad</label>
+      <input type="text" class="form-control" id="inputCity" id="ciudad" required>
     </div>
     <div class="col-md-4">
-      <label for="inputState" class="form-label">State</label>
-      <select id="inputState" class="form-select">
-        <option selected>Choose...</option>
+      <label for="inputState" class="form-label">Provincia</label>
+      <select id="inputState" id="provincia" class="form-select" required>
+        <option selected>Elegir...</option>
         <option>...</option>
       </select>
     </div>
     <div class="col-md-2">
-        <label for="inputZip" class="form-label">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
+        <label for="inputZip" class="form-label">Código Postal</label>
+        <input type="text" class="form-control" id="inputZip" id="codigoPostal" required >
       </div>
     <div class="col-12">
     <label class="label" for="message">Mensaje:</label>
     <textarea class="textarea" id="message" name="message" rows="4" required></textarea>
     </div>
-
-    
+  
     <div class="col-12">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
+        <label class="form-check-label" for="gridCheck" required>
+          Acepto las condiciones
         </label>
       </div>
     </div>
     <div class="col-12">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" class="btn btn-primary" id="botonEnviarFormulario">Enviar</button>
     </div>
   </form>
 </section>
-
-
-
-
-
 
   <div class="separador"></div>
 
@@ -164,7 +159,9 @@
     </div>
 </footer>
 
-  <script src="./js/bootstrap.bundle.min.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+<script src="../js/index.js"></script>
 
 </body>
 
