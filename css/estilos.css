@@ -39,6 +39,10 @@ h1 {
     color: whitesmoke;
 }
 
+.h1Carrito{
+    padding-top: 10px;
+    color: black;
+}
 .sectionPrincipalIndex {
     background-image: url(../assets/img/Gemini_Generated_Image_ic5ntjic5ntjic5n.jpeg);
     background-size: cover;
