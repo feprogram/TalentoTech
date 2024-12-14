@@ -51,33 +51,38 @@
   <form class="row g-3" id="miFormulario">
     <div class="col-md-6">
     <label class="label" for="name">Nombre:</label>
-    <input class="input" type="text" id="name" name="name" required placeholder="Ingrese su nombre">
-    <small class="text-danger"></small>
+    <input class="input" type="text" id="name" name="nombre" placeholder="Ingrese su nombre">
+    <small class="text-danger d-none" id="errorNombre">El nombre es obligatorio.</small>
     </div>
     <div class="col-md-6">
     <label class="label" for="apellido">Apellido:</label>
-    <input class="input" type="text" id="apellido" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+    <input class="input" type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+    <small class="text-danger d-none" id="errorApellido">El apellido es obligatorio.</small>
     </div>
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail1" id="email" placeholder="Ingrese su correo electrónico">
+      <input type="email" class="form-control" id="inputEmail1" placeholder="Ingrese su correo electrónico">
+      <small class="text-danger d-none" id="errorEmail1">Ingrese un email válido.</small>
     </div>
     <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Re Ingresar Email</label>
-      <input type="email" class="form-control" id="inputEmail2" id="email" placeholder="Re ingrese su correo electrónico">
+      <input type="email" class="form-control" id="inputEmail2" placeholder="Re ingrese su correo electrónico">
+      <small class="text-danger d-none" id="errorEmail2">Los correos no coinciden.</small>
     </div>
    
     <div class="col-12">
       <label for="inputAddress" class="form-label">Dirección</label>
-      <input type="text" class="form-control" id="inputAddress" id="direccion" placeholder="Ingrese su dirección...">
+      <input type="text" class="form-control" id="inputAddress1"  placeholder="Ingrese su dirección...">
+      <small class="text-danger d-none" id="errorDireccion1">Debe ingresar una dirección correcta.</small>
     </div>
     <div class="col-12">
       <label for="inputAddress2" class="form-label">Dirección 2</label>
-      <input type="text" class="form-control" id="inputAddress2" id="direccion" placeholder="Dpto., estudio, o piso...">
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Dpto., estudio, o piso...">
     </div>
     <div class="col-md-6">
       <label for="inputCity" class="form-label">Ciudad</label>
-      <input type="text" class="form-control" id="inputCity" id="ciudad">
+      <input type="text" class="form-control" id="inputCity">
+      <small class="text-danger d-none" id="errorLocalidad">Debe ingresar una localidad.</small>
     </div>
     <div class="col-md-4">
       <label for="inputState" class="form-label">Provincia</label>
@@ -89,10 +94,12 @@
     <div class="col-md-2">
         <label for="inputZip" class="form-label">Código Postal</label>
         <input type="text" class="form-control" id="inputZip" id="codigoPostal" >
+        <small class="text-danger d-none" id="errorCPostal">El Código Postal es obligatorio.</small>
       </div>
     <div class="col-12">
     <label class="label" for="message">Mensaje:</label>
     <textarea class="textarea" id="message" name="message" rows="4"></textarea>
+    <small class="text-danger d-none" id="errorMensaje">El mensaje debe tener al menos 10 caracteres.</small>
     </div>
   
     <div class="col-12">
