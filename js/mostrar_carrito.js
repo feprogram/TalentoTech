@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tablaCarrito = document.getElementById("tablaCarrito");
     const totalCarrito = document.getElementById("totalCarrito");
+    const cantidadCarrito = document.getElementById("cantidadCarrito");
 
     // Obtener carrito de localStorage
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (carrito.length === 0) {
             tablaCarrito.innerHTML = "<tr><td colspan='3'>El carrito está vacío.</td></tr>";
             totalCarrito.textContent = "0.00";
+            cantidadCarrito.textContent = "0";
             return;
         }
 
@@ -31,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Actualizar el total
         calcularTotal();
+        calcularCantidad();
     };
     //El método reduce es una method de los arrays en JavaScript que se utiliza para iterar sobre los elementos de un array y reducirlos a un único valor (como un número, un objeto, una cadena, etc.).
     //array.reduce(callback(acumulador, valorActual[, índice[, array]]), valorInicial)
-
 
     const calcularTotal = () => { 
         // Declaración de la función calcularTotal como una función flecha.
@@ -50,6 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // Redondeamos el total a 2 decimales usando .toFixed(2) y actualizamos el contenido del elemento
         // HTML con ID `totalCarrito` para mostrar el total calculado.
     };
+
+  // **Nueva función para calcular la cantidad total de productos**
+     const calcularCantidad = () => {
+    const cantidad = carrito.length; // La cantidad total de productos es la longitud del array
+    cantidadCarrito.textContent = cantidad; // Actualizamos el elemento HTML con la cantidad
+    };
+
+
     
 
     // Event listener para eliminar un producto

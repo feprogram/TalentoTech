@@ -1,0 +1,27 @@
+const API_KEY = "7Rq4YbdpPjHQJeD64mHoAcXolX3h2OCu"; // Reemplaza con tu clave API
+const ciudad = "Buenos Aires"; // Ciudad que deseas consultar
+const locationUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${ciudad}`;
+
+fetch(locationUrl)
+  .then(response => {
+    if (!response.ok) throw new Error(`Error al buscar la ubicación: ${response.status}`);
+    return response.json();
+  })
+  .then(data => {
+    if (data.length === 0) throw new Error("No se encontró la ubicación.");
+    const locationKey = data[0].Key;
+    const weatherUrl = `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}`;
+    return fetch(weatherUrl);
+  })
+  .then(response => {
+    if (!response.ok) throw new Error(`Error al obtener el clima: ${response.status}`);
+    return response.json();
+  })
+  .then(weatherData => {
+    const clima = weatherData[0];
+    document.getElementById("resultado").innerHTML = `
+      <p>${ciudad} - ${clima.WeatherText} - ${clima.Temperature.Metric.Value}°C</p>`;
+  })
+  .catch(error => {
+    document.getElementById("resultado").textContent = `Error: ${error.message}`;
+  });

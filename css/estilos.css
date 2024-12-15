@@ -22,6 +22,12 @@ body {
     background-color: whitesmoke;
 }
 
+.separador-Clima {
+    height: 10px;
+    background-color: whitesmoke;
+}
+
+
 header,
 main,
 footer {
