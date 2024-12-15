@@ -1,6 +1,6 @@
 const API_KEY = "7Rq4YbdpPjHQJeD64mHoAcXolX3h2OCu"; // Reemplaza con tu clave API
 const ciudad = "Buenos Aires"; // Ciudad que deseas consultar
-const locationUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${ciudad}`;
+const locationUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${ciudad}&language=es`;
 
 fetch(locationUrl)
   .then(response => {
@@ -10,7 +10,7 @@ fetch(locationUrl)
   .then(data => {
     if (data.length === 0) throw new Error("No se encontró la ubicación.");
     const locationKey = data[0].Key;
-    const weatherUrl = `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}`;
+    const weatherUrl = `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}&language=es`;
     return fetch(weatherUrl);
   })
   .then(response => {

@@ -47,20 +47,19 @@ document.addEventListener("DOMContentLoaded", () => {
         // - `producto` es cada elemento (objeto) del array `carrito`.
         // - `parseFloat(producto.precio)` convierte el precio del producto a número decimal (en caso de que esté en formato texto).
         // - La función suma el precio de cada producto al acumulador `suma`.
-    
-        totalCarrito.textContent = total.toFixed(2);
-        // Redondeamos el total a 2 decimales usando .toFixed(2) y actualizamos el contenido del elemento
         // HTML con ID `totalCarrito` para mostrar el total calculado.
-    };
+        // Formatear el total a moneda local (Argentina) para que tenga dos decimales e incorpore una ","" para separar los miles
+            totalCarrito.textContent = total.toLocaleString('es-AR', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+        };
 
   // **Nueva función para calcular la cantidad total de productos**
      const calcularCantidad = () => {
     const cantidad = carrito.length; // La cantidad total de productos es la longitud del array
     cantidadCarrito.textContent = cantidad; // Actualizamos el elemento HTML con la cantidad
     };
-
-
-    
 
     // Event listener para eliminar un producto
     tablaCarrito.addEventListener("click", (event) => { 
