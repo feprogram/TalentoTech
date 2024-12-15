@@ -19,9 +19,13 @@ fetch(locationUrl)
   })
   .then(weatherData => {
     const clima = weatherData[0];
+        const iconNumber = String(clima.WeatherIcon).padStart(2, "0"); // Asegurar formato de 2 dígitos
+        const iconUrl = `https://developer.accuweather.com/sites/default/files/${iconNumber}-s.png`; // URL del icono
     document.getElementById("resultado").innerHTML = `
-      <p>${ciudad} - ${clima.WeatherText} - ${clima.Temperature.Metric.Value}°C</p>`;
+      <p>${ciudad}<img src="${iconUrl}" alt="${clima.WeatherText}"/>${clima.Temperature.Metric.Value}°C</p>`;
   })
   .catch(error => {
     document.getElementById("resultado").textContent = `Error: ${error.message}`;
   });
+
+
