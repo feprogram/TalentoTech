@@ -1,5 +1,5 @@
-const API_KEY = "7Rq4YbdpPjHQJeD64mHoAcXolX3h2OCu"; // Reemplaza con tu clave API
-const ciudad = "Buenos Aires"; // Ciudad que deseas consultar
+const API_KEY = "7Rq4YbdpPjHQJeD64mHoAcXolX3h2OCu"; // Clave API
+const ciudad = "Buenos Aires"; // Ciudad a consultar
 const locationUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${ciudad}&language=es`;
 
 fetch(locationUrl)
